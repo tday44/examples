@@ -18,10 +18,10 @@ if (!empty($_REQUEST['submitted'])) {
 
 
     // Connect to local Elasticsearch node
-    $esPort = getenv('APP_ES_PORT') ?: 9200;
+    $esPort = getenv('APP_ES_PORT') ?: 9243;
 
     $hosts = [
-        'localhost:' . $esPort
+        'https://7e3e6ab48388188f6e3c9572b6e89fc7.us-west1.gcp.cloud.es.io:9243' . $esPort
     ];
 
     $client = ClientBuilder::create()           // Instantiate a new ClientBuilder
